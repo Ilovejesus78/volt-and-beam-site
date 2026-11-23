@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volt & Beam | Construction & Electrical Contractor</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -14,92 +13,84 @@
             --light-grey: #f4f4f4;
             --white: #ffffff;
         }
-
         body { font-family: 'Roboto', sans-serif; margin: 0; color: var(--dark-grey); line-height: 1.6; background-color: var(--light-grey); }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; }
-
-        /* Header & Unified Logo Styling */
-        header { 
-            background: var(--white); 
-            padding: 15px 10%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .logo { 
-            display: flex; 
-            align-items: center; 
-            color: var(--primary-blue); 
-            font-size: 1.5rem; 
-            font-weight: 800; 
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        .logo img { 
-            height: 38px; 
-            width: auto;
-            margin-right: 10px;
-            border-radius: 4px;
-        }
+        header { background: var(--white); padding: 15px 10%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { display: flex; align-items: center; color: var(--primary-blue); font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
+        .logo img { height: 38px; width: auto; margin-right: 10px; border-radius: 4px; }
         .logo span { color: var(--accent-gold); }
         nav a { margin-left: 25px; text-decoration: none; color: var(--dark-grey); font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
         nav a:hover { color: var(--primary-blue); }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(26, 74, 122, 0.85), rgba(26, 74, 122, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18fcd35?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            color: var(--white);
-            text-align: center;
-            padding: 100px 20px;
-        }
+        .hero { background: linear-gradient(rgba(26, 74, 122, 0.85), rgba(26, 74, 122, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18fcd35?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; color: var(--white); text-align: center; padding: 100px 20px; }
         .hero h1 { font-size: 2.8rem; margin-bottom: 20px; color: var(--white); }
         .hero h1 span { color: var(--accent-gold); }
         .hero p { font-size: 1.2rem; max-width: 650px; margin: 0 auto 30px auto; color: #e0e0e0; }
-        .btn {
-            background: var(--accent-gold);
-            color: var(--dark-grey);
-            padding: 12px 30px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 4px;
-            text-transform: uppercase;
-            display: inline-block;
-            transition: 0.3s;
-        }
+        .btn { background: var(--accent-gold); color: var(--dark-grey); padding: 12px 30px; font-weight: 700; text-decoration: none; border-radius: 4px; text-transform: uppercase; display: inline-block; transition: 0.3s; }
         .btn:hover { background: #d99c23; }
-
-        /* Content Sections */
         .container { max-width: 1100px; margin: 40px auto; background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .container h2 { color: var(--primary-blue); border-bottom: 3px solid var(--accent-gold); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 25px; }
+        .service-card { background: var(--light-grey); padding: 25px; border-radius: 6px; border-left: 4px solid var(--accent-gold); }
+        .service-card h3 { color: var(--primary-blue); font-size: 1.1rem; margin-top: 0; margin-bottom: 10px; }
+        .service-card p { margin: 0; font-size: 0.95rem; }
+        footer { background: var(--dark-grey); color: var(--white); text-align: center; padding: 25px 15px; margin-top: 50px; font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 15px 5%; }
+            nav { margin-top: 12px; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 2rem; }
+            .container { margin: 20px 15px; padding: 25px; }
         }
-        .service-card {
-            background: var(--light-grey);
-            padding: 25px;
-            border-radius: 6px;
-            border-left: 4px solid var(--accent-gold);
-        }
-        .service-card h3 {
-            color: var(--primary-blue);
-            font-size: 1.1rem;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        .service-card p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        footer { background: var(--dark-grey);
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Volt <span>&amp;</span> Beam</a>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Built to Last <span>Wired for the Future</span></h1>
+        <p>Licensed residential construction, dual-occupancy developments, and commercial &amp; residential electrical contracting across New South Wales.</p>
+        <a href="#contact" class="btn">Get a Quote</a>
+    </section>
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <p>We deliver integrated structural building and licensed electrical solutions across Western Sydney and the South Coast:</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Electrical Contracting</h3>
+                <p>Multi-phase switchboard upgrades, circuit protection, consumer mains, fault diagnostics, and full residential &amp; commercial rewiring.</p>
+            </div>
+            <div class="service-card">
+                <h3>Residential Construction</h3>
+                <p>Custom new builds, dual-occupancy developments, structural framing, renovations, and end-to-end project management.</p>
+            </div>
+            <div class="service-card">
+                <h3>Architectural &amp; Smart Lighting</h3>
+                <p>Automated lighting control systems, low-voltage linear LED installations, outdoor pergola lighting, and energy-efficient fit-outs.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="about">
+        <h2>Our Core Expertise</h2>
+        <p>We combine advanced electrical engineering systems with rugged structural construction to deliver exceptional results across New South Wales. By combining licensed building expertise with accredited electrical contracting under one roof, we eliminate trade delays and ensure compliance with Australian Standards and NSW building regulations.</p>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p>Ready to discuss your next construction or electrical project? Get in touch for an on-site consultation and quote:</p>
+        <p>
+            <strong>Phone:</strong> <a href="tel:+61416293776" style="color: var(--primary-blue); font-weight: 700; text-decoration: none;">0416 293 776</a><br>
+            <strong>Email:</strong> <a href="mailto:melgroup78@gmail.com" style="color: var(--primary-blue); font-weight: 700; text-decoration: none;">melgroup78@gmail.com</a><br>
+            <strong>ABN:</strong> 50 109 380 770<br>
+            <strong>NSW Licence No:</strong> 165912C
+        </p>
+    </div>
+    <footer>
+        <p>&copy; 2026 Volt &amp; Beam Services | ABN: 50 109 380 770 | NSW Lic: 165912C | All rights reserved.</p>
+    </footer>
+</body>
+</html>
