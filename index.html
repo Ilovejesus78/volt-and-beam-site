@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +18,7 @@
         body { font-family: 'Roboto', sans-serif; margin: 0; color: var(--dark-grey); line-height: 1.6; background-color: var(--light-grey); }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; }
 
-        /* Header & Navigation */
+        /* Header & Unified Logo Styling */
         header { 
             background: var(--white); 
             padding: 15px 10%; 
@@ -31,7 +30,22 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .logo { color: var(--primary-blue); font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; }
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            color: var(--primary-blue); 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .logo img { 
+            height: 38px; 
+            width: auto;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
         .logo span { color: var(--accent-gold); }
         nav a { margin-left: 25px; text-decoration: none; color: var(--dark-grey); font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
         nav a:hover { color: var(--primary-blue); }
@@ -88,71 +102,4 @@
         }
 
         /* Footer */
-        footer { background: var(--dark-grey); color: var(--white); text-align: center; padding: 25px 15px; margin-top: 50px; font-size: 0.9rem; }
-    </style>
-</head>
-<body>
-
-    <!-- Header & Nav -->
-    <header>
-        <div class="logo">Volt <span>&amp;</span> Beam</div>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Built to Last <span>Wired for the Future</span></h1>
-        <p>Licensed residential construction, dual-occupancy developments, and commercial &amp; residential electrical contracting across New South Wales.</p>
-        <a href="#contact" class="btn">Get a Quote</a>
-    </section>
-
-    <!-- Services Section -->
-    <div class="container" id="services">
-        <h2>Our Services</h2>
-        <p>We deliver integrated structural building and licensed electrical solutions across Western Sydney and the South Coast:</p>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Electrical Contracting</h3>
-                <p>Multi-phase switchboard upgrades, circuit protection, consumer mains, fault diagnostics, and full residential &amp; commercial rewiring.</p>
-            </div>
-            <div class="service-card">
-                <h3>Residential Construction</h3>
-                <p>Custom new builds, dual-occupancy developments, structural framing, renovations, and end-to-end project management.</p>
-            </div>
-            <div class="service-card">
-                <h3>Architectural &amp; Smart Lighting</h3>
-                <p>Automated lighting control systems, low-voltage linear LED installations, outdoor pergola lighting, and energy-efficient fit-outs.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <div class="container" id="about">
-        <h2>Why Volt &amp; Beam</h2>
-        <p>By combining licensed building expertise with accredited electrical contracting under one roof, we eliminate trade delays and ensure seamless compliance with Australian Standards and NSW building regulations from slab to switchboard.</p>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="container" id="contact">
-        <h2>Contact Us</h2>
-        <p>Ready to discuss your next construction or electrical project? Get in touch for an on-site consultation and quote:</p>
-        <p>
-            <strong>Phone:</strong> <a href="tel:+61416293776" style="color: var(--primary-blue); font-weight: 700; text-decoration: none;">0416 293 776</a><br>
-            <strong>Email:</strong> <a href="mailto:melgroup78@gmail.com" style="color: var(--primary-blue); font-weight: 700; text-decoration: none;">melgroup78@gmail.com</a><br>
-            <strong>ABN:</strong> 50 109 380 770<br>
-            <strong>NSW Licence No:</strong> 165912C
-        </p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Volt &amp; Beam Services | ABN: 50 109 380 770 | NSW Lic: 165912C</p>
-    </footer>
-
-</body>
-</html>
+        footer { background: var(--dark-grey);
